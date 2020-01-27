@@ -63,11 +63,11 @@ Test(Speak_Es, Woody) {
     OSRedirector oss(std::cout);
 
     Woody* woddy = new Woody("Marionette", "jhefie");
-    bool status = woddy->speak("Je suis woody ;)");
+    bool status = woddy->speak_es("Je suis woody ;)");
     cr_assert_eq(oss.getContent(), "");
     cr_assert(status == false);
 
-    auto e = woody->getLastError();
+    auto e = woddy->getLastError();
     cr_assert(e.type == Toy::Error::SPEAK);
     cr_assert(e.where() == "speak_es");
     cr_assert(e.what() == "wrong mode");
