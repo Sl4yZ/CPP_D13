@@ -63,7 +63,7 @@ cd ..
 echo "--- End testing ex03 ---"
 
 echo "--- Testing ex04 ---"
-cp ../ex04/* ex04tests
+cp ../ex04/* ex04_tests
 cp media/woody.txt ex04_tests
 cp media/buzz.txt ex04_tests
 cd ex04_tests
@@ -71,7 +71,7 @@ g++ -std=c++14 -Wall -Wextra -fprofile-arcs -ftest-coverage --coverage -lcriteri
 if [ $? -ne 0 ]; then
     ((err++))
 fi
-./ex03 --ascii
+./ex04 --ascii
 if [ $? -ne 0 ]; then
     ((err++))
 fi
