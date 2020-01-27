@@ -39,7 +39,7 @@ Test(Speak_Es, Toy) {
     cr_assert_eq(oss.getContent(), "");
     cr_assert(status == false);
 
-    auto e = toy.getLastError();
+    auto e = toy->getLastError();
     cr_assert(e.type == Toy::Error::SPEAK);
     cr_assert(e.where() == "speak_es");
     cr_assert(e.what() == "wrong mode");
@@ -53,7 +53,7 @@ Test(Speak_Es, Buzz) {
     cr_assert_eq(oss.getContent(), "BUZZ: Eclair senorita \"Je suis buzz ;)\" senorita\n");
     cr_assert(status == true);
 
-    auto e = buzz.getLastError();
+    auto e = buzz->getLastError();
     cr_assert(e.type == Toy::Error::UNKNOWN);
     cr_assert(e.where() == "");
     cr_assert(e.what() == "");
@@ -67,7 +67,7 @@ Test(Speak_Es, Woody) {
     cr_assert_eq(oss.getContent(), "");
     cr_assert(status == false);
 
-    auto e = woody.getLastError();
+    auto e = woody->getLastError();
     cr_assert(e.type == Toy::Error::SPEAK);
     cr_assert(e.where() == "speak_es");
     cr_assert(e.what() == "wrong mode");
