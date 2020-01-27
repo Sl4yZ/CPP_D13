@@ -58,7 +58,6 @@ std::string expected = "Emile\n"
 
 Test(Operator, Toy) {
     OSRedirector oss(std::cout);
-    cr_assert_eq(oss.getContent(), "poney Created\n");
 
     Toy toy(Toy::ToyType::BASIC_TOY, "Emile", "../media/alien.txt");
     std::cout << toy << std::endl;
