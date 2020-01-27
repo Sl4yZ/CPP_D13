@@ -60,9 +60,9 @@ Test(Operator, Toy) {
     OSRedirector oss(std::cout);
     cr_assert_eq(oss.getContent(), "poney Created\n");
 
-    Toy* toy = new Toy(Toy::ToyType::BASIC_TOY, "Emile", "../media/alien.txt")
+    Toy* toy = new Toy(Toy::ToyType::BASIC_TOY, "Emile", "../media/alien.txt");
     std::cout << toy << std::endl;
-    toy << "////LOL"
+    toy << "////LOL";
     std::cout << toy << std::endl;
     cr_assert_eq(oss.getContent(), expected);
 }
