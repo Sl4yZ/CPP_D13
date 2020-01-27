@@ -50,7 +50,7 @@ Test(Picture, new_from_file) {
 }
 
 Test(Picture, getFromFile) {
-    Picture* pic = new Picture();
+    Picture* pic = new Picture("duud");
     bool status = pic->getPictureFromFile("../media/alien.txt");
     cr_assert(pic->data == image);
     cr_assert(status == true);
