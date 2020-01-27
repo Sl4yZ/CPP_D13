@@ -87,7 +87,7 @@ Test(Toy, getAscii) {
 Test(Toy, setAscii) {
     Toy* alien = new Toy(Toy::ToyType::ALIEN, "Alien", "jzhi");
     cr_assert(alien->getAscii() == "ERROR");
-    alien->setAscii("tests/media/alien.txt");
+    alien->setAscii("../media/alien.txt");
     cr_assert(alien->getAscii() == image);
 }
 
