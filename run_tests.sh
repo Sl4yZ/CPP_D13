@@ -23,7 +23,7 @@ g++ -std=c++14 -Wall -Wextra -fprofile-arcs -ftest-coverage --coverage -lcriteri
 if [ $? -ne 0 ]; then
     ((err++))
 fi
-./ex00 --ascii
+./ex01 --ascii
 if [ $? -ne 0 ]; then
     ((err++))
 fi
