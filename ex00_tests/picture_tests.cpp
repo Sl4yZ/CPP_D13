@@ -40,11 +40,6 @@ const std::string image = "         _|_\n"
               "      _\\__|__/_\n"
               "     `\"\"\"\"`\"\"\"\"`\n";
 
-Test(Picture, new_empty) {
-    Picture* pic = new Picture();
-    cr_assert(pic->data == "");
-    delete pic;
-}
 
 Test(Picture, new_from_file) {
     Picture* pic = new Picture("../media/alien.txt");
