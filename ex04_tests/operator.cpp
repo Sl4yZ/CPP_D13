@@ -50,7 +50,7 @@ std::string expected = "Emile\n"
                   "     |===L_I===|\n"
                   "      \\       /\n"
                   "      _\\__|__/_\n"
-                  "     `\"\"\"\"`\"\"\"\"`\n";
+                  "     `\"\"\"\"`\"\"\"\"`\n\n";
 
 Test(Operator, Toy) {
     OSRedirector oss(std::cout);
