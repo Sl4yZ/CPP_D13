@@ -45,7 +45,7 @@ Test(Speak, Buzz) {
 
     Buzz* buzz = new Buzz("Eclair", "jhefie");
 
-    toy->speak("Je suis buzz ;)");
+    buzz->speak("Je suis buzz ;)");
     cr_assert_eq(oss.getContent(), "BUZZ: Eclair \"Je suis buzz ;)\"\n");
 }
 
@@ -54,7 +54,7 @@ Test(Speak, Buzz) {
 
     Woody* woddy = new Buzz("Marionette", "jhefie");
 
-    toy->speak("Je suis woody ;)");
+    woddy->speak("Je suis woody ;)");
     cr_assert_eq(oss.getContent(), "WOODY: Marionette \"Je suis woody ;)\"\n");
 }
 
