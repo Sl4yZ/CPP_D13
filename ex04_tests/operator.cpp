@@ -41,7 +41,6 @@ const std::string image = "         _|_\n"
                           "     `\"\"\"\"`\"\"\"\"`\n";
 
 std::string expected = "Emile\n"
-                  "\n"
                   "         _|_\n"
                   "   ,_.-_' _ '_-._,\n"
                   "    \\ (.)(.)(.) /\n"
@@ -51,18 +50,15 @@ std::string expected = "Emile\n"
                   "     |===L_I===|\n"
                   "      \\       /\n"
                   "      _\\__|__/_\n"
-                  "     `\"\"\"\"`\"\"\"\"`\n"
-                  "\n"
-                  "Emile\n"
-                  "////LOL\n";
+                  "     `\"\"\"\"`\"\"\"\"`\n";
 
 Test(Operator, Toy) {
     OSRedirector oss(std::cout);
 
     Toy toy(Toy::ToyType::BASIC_TOY, "Emile", "../media/alien.txt");
     std::cout << toy << std::endl;
-    toy << "////LOL";
-    std::cout << toy << std::endl;
     cr_assert_eq(oss.getContent(), expected);
+    toy << "////LOL";
+    cr_assert(toy.getAscii() == "////LOL");
 }
 
