@@ -46,6 +46,22 @@ fi
 cd ..
 echo "--- End testing ex02 ---"
 
+echo "--- Testing ex03 ---"
+cp ../ex03/* ex03_tests
+cp media/woody.txt ex03_tests
+cp media/buzz.txt ex03_tests
+cd ex03_tests
+g++ -std=c++14 -Wall -Wextra -fprofile-arcs -ftest-coverage --coverage -lcriterion *.cpp -o ex03
+if [ $? -ne 0 ]; then
+    ((err++))
+fi
+./ex03 --ascii
+if [ $? -ne 0 ]; then
+    ((err++))
+fi
+cd ..
+echo "--- End testing ex03 ---"
+
 if [ $err -ne 0 ]; then
     exit 1
 fi
