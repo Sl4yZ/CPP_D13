@@ -52,7 +52,7 @@ Test(Speak, Buzz) {
 Test(Speak, Woody) {
     OSRedirector oss(std::cout);
 
-    Woody* woddy = new Buzz("Marionette", "jhefie");
+    Woody* woddy = new Woody("Marionette", "jhefie");
 
     woddy->speak("Je suis woody ;)");
     cr_assert_eq(oss.getContent(), "WOODY: Marionette \"Je suis woody ;)\"\n");
