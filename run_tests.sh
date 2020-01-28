@@ -28,7 +28,7 @@ if [ $? -ne 0 ]; then
     ((err++))
 fi
 cd ..
-echo "--- End testing ex00 ---"
+echo "--- End testing ex01 ---"
 
 echo "--- Testing ex02 ---"
 cp ../ex02/* ex02_tests
